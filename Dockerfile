@@ -15,7 +15,7 @@ RUN apt update -y && apt-get install -y unzip curl git  && apt upgrade -y &&\
     unzip /tmp/glide.zip -d /opt/ && mkdir /opt/bin &&\
     chmod +x /opt/linux-amd64/glide &&\ 
     ln -s /opt/linux-amd64/glide /bin/glide &&\ 
-    sh /tmp/dep.sh && ln -s /opt/src/bin/dep /bin/dep &&\
+    sh /tmp/dep.sh &&\
     apt-get autoclean && apt-get autoremove &&\
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
