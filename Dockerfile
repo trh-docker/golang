@@ -19,5 +19,4 @@ RUN unzip /tmp/glide.zip -d /opt/ && mkdir /opt/bin &&\
     chmod +x /opt/linux-amd64/glide &&\ 
     ln -s /opt/linux-amd64/glide /bin/glide
 
-
 ENV GOPATH=/opt/src/
