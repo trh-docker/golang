@@ -7,7 +7,6 @@ ENV GOPATH=/opt/src/ \
     GO_VERSION=1.10.7
 
 ADD https://storage.googleapis.com/golang/go${GO_VERSION}.linux-amd64.tar.gz /opt/tmp/
-ADD ./files/dep-linux-amd64 /opt/tmp/dep
 
 ADD https://github.com/Masterminds/glide/releases/download/v0.13.2/glide-v0.13.2-linux-amd64.zip /tmp/glide.zip
 ADD https://raw.githubusercontent.com/golang/dep/master/install.sh /tmp/dep.sh
