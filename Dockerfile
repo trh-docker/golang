@@ -12,7 +12,7 @@ ADD https://storage.googleapis.com/golang/go${GO_VERSION}.linux-amd64.tar.gz /op
 ADD https://github.com/Masterminds/glide/releases/download/v0.13.2/glide-v0.13.2-linux-amd64.zip /tmp/glide.zip
 ADD https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 /tmp/dep
 
-RUN apt update -y && apt-get install -y unzip curl git  && apt upgrade -y &&\
+RUN apt update -y && apt-get upgrade && apt-get install -y unzip curl git  && apt upgrade -y &&\
     unzip /tmp/glide.zip -d /opt/ && mkdir /opt/bin &&\
     chmod +x /opt/linux-amd64/glide &&\ 
     mv /tmp/dep /opt/go/bin/dep &&\
