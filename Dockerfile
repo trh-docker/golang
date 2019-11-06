@@ -4,8 +4,8 @@ RUN mkdir -p /opt/tmp /opt/src /opt/go/bin
 ENV GOPATH=/opt/src/ \
     GOBIN=/opt/go/bin \
     PATH=/opt/go/bin:$PATH \
-    GO_VERSION=1.11.4 \
-    DEP_VERSION=0.5.0
+    GO_VERSION=1.11 \
+    DEP_VERSION=0.5.4
 
 ADD https://storage.googleapis.com/golang/go${GO_VERSION}.linux-amd64.tar.gz /opt/tmp/
 
