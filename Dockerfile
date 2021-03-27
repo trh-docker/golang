@@ -4,13 +4,13 @@ RUN mkdir -p /opt/tmp /opt/src /opt/go/bin
 ENV GOPATH=/opt/src/ \
     GOBIN=/opt/go/bin \
     PATH=/opt/go/bin:$PATH \
-    GO_VERSION=1.15.2 \
+    GO_VERSION=1.16.2 \
     GOPROXY=direct \
     GOSUMDB=off
 
 ADD https://storage.googleapis.com/golang/go${GO_VERSION}.linux-amd64.tar.gz /opt/tmp/
 
-RUN apt update -y && apt-get -y upgrade  && apt-get install -y unzip curl git  && apt upgrade -y &&\
+RUN apt update -y && apt-get -y upgrade  && apt-get install -y unzip curl git gcc build-essential  && apt upgrade -y &&\
     tar -C /opt/ -xzf /opt/tmp/go${GO_VERSION}.linux-amd64.tar.gz &&\
     chmod +x /opt/go/bin/* &&\
     ln -s /opt/go/bin/* /bin/ &&\
