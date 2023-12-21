@@ -4,7 +4,7 @@ RUN mkdir -p /opt/tmp /opt/src /opt/go/bin
 ENV GOPATH=/opt/src/ \
     GOBIN=/opt/go/bin \
     PATH=/opt/go/bin:$PATH \
-    GO_VERSION=1.21.5 \
+    GO_VERSION=1.20.12 \
     GOPROXY=direct \
     GOSUMDB=off
 
