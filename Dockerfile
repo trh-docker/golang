@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 RUN mkdir -p /opt/tmp /opt/src /opt/go/bin
 ENV GOPATH=/opt/src/ \
