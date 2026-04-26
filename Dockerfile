@@ -4,11 +4,12 @@ RUN mkdir -p /opt/tmp /opt/src /opt/go/bin
 ENV GOPATH=/opt/src/ \
     GOBIN=/opt/go/bin \
     PATH=/opt/go/bin:$PATH \
-    GO_VERSION=1.24.4 \
+    GO_VERSION=1.26.2 \
     GOPROXY=direct \
     GOSUMDB=off
 
-ADD https://storage.googleapis.com/golang/go${GO_VERSION}.linux-amd64.tar.gz /opt/tmp/
+#https://go.dev/dl/go1.26.2.darwin-amd64.pkg
+ADD https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz /opt/tmp/
 
 RUN apt update -y && apt-get -y upgrade  && apt-get install -y unzip curl git  && apt upgrade -y &&\
     tar -C /opt/ -xzf /opt/tmp/go${GO_VERSION}.linux-amd64.tar.gz &&\
